@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="splash-screen">🎥 MovieApp</div>
+
+  <header>
+    <h1>🎥 MovieApp</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search movies..." />
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+      </select>
+      <select id="sortFilter">
+        <option value="popular">Popular</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="release_date_desc">Newest</option>
+        <option value="release_date_asc">Oldest</option>
+      </select>
+      <button id="themeToggle">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="movie-list"></div>
+    <div id="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </main>
+
+  <div id="detailPanel" aria-hidden="true">
+    <button id="closePanel" aria-label="Close details panel">×</button>
+    <img id="detailPoster" alt="Movie poster" />
+    <h2 id="detailTitle"></h2>
+    <p id="detailGenre"></p>
+    <p id="detailDate"></p>
+    <p id="detailDesc"></p>
+    <div id="trailerContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
